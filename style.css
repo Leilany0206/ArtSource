@@ -19,7 +19,7 @@
       "nav nav nav nav"
       "sidebar portada portada content3"
       "sidebar content1 content2 content3"
-      "sidebar footer footer footer";
+      "sidebar content1 content4 content4";
     grid-gap: 0.2rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -45,7 +45,10 @@
   }
   
   #portada {
-    background-color: #73ffba;
+    background-image: url(Posibleportada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
     grid-area: portada;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -60,7 +63,7 @@
   }
 
   #sidebar a {
-    color:  #48009b;;
+    color:  #48009b;
   }
 
   #sidebar a:hover {
@@ -92,6 +95,10 @@
   .pincelint {
     background-color: rgba(153, 131, 198, 0.612);
     border-radius: var(--main-radius);
+  }
+
+  .pincelint a:hover {
+      color: #ffffff;
   }
 
 /*Cajita pincel 2*/
@@ -174,29 +181,58 @@
 }
 
   #content1 {
-    background: #6fffd2;
+    background: #8A2BE2;
     grid-area: content1;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
   }
-  
+
+  .cajaper {
+    margin: 5px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px 24px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". ."
+      ". .";
+  }
+
+  .cajitasper {
+    display: grid;
+    grid-template-rows: 70% 1fr;
+    gap: 5px;
+  }
+
+  .cajitasper a {
+    color:  #99e4ff;
+  }
+
+  .perimg {
+    background-image: url(Perspectiva.jpg);
+    background-repeat: no-repeat;
+  background-size: cover;
+  }
+
   #content2 {
-    background: #64ffda;
+    background: #120052;
     grid-area: content2;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
   }
   
   #content3 {
-    background: #73ffba;
+    background: #9b26d5;
     grid-area: content3;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
   }
   
-  footer {
-    background: #1de9b6;
-    grid-area: footer;
+  #content4 {
+    background: #21adf8;
+    grid-area: content4;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
   }
@@ -218,14 +254,14 @@
   @media only screen and (max-width: 768px) {
     .containergrid {
       grid-template-columns: 1fr;
-      grid-template-rows: 0.1fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+      grid-template-rows: 0.1fr 0.4fr 0.4fr 1.2fr 1.2fr 1.2fr 1fr;
       grid-template-areas:
         "nav"
-        "sidebar"
         "portada"
+        "sidebar"
         "content1"
         "content2"
         "content3"
-        "footer";
+        "content4";
     }
   }
