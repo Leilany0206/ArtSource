@@ -1,0 +1,231 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    margin: 0px;
+    background-color: rgb(2, 2, 2);
+  }
+
+  .containergrid {
+    margin: 5px;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      "sidebar portada portada content3"
+      "sidebar content1 content2 content3"
+      "sidebar footer footer footer";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    height: fit-content;
+  }
+
+  h1 {
+    color: #c0b8dc;
+    font-size:x-large;
+  }
+  
+  nav {
+    background-color: rgb(2, 2, 2);
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+
+  .logo {
+      height: 50px;
+  }
+  
+  #portada {
+    background-color: #73ffba;
+    grid-area: portada;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  /*Sidebar de pinceles y assets*/
+
+  #sidebar {
+    background: #1d004d;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+
+  #sidebar a {
+    color:  #48009b;;
+  }
+
+  #sidebar a:hover {
+    color: #ffffff;
+  }
+
+  /*Cajita Masterlist*/
+  .masterlist {
+    padding: 2%;
+    background-image: url(FondoMasterlist.jpg);
+    margin: 5px;
+    border-radius: var(--main-radius);
+  }
+  
+  .masterlist > * {
+    margin: 5px;
+  }
+
+  /*Cajita Pincel=Elementos hijo para todas las demás cajas*/
+  .pincel {
+    padding: 2%;
+    background-image: url(Pincel1.2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5px;
+    border-radius: var(--main-radius);
+  }
+
+  .pincelint {
+    background-color: rgba(153, 131, 198, 0.612);
+    border-radius: var(--main-radius);
+  }
+
+/*Cajita pincel 2*/
+.pincel2 {
+  padding: 2%;
+  background-image: url(Pincel2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: var(--main-radius);
+  margin-top: 5px;
+}
+
+/*Cajita pincel 3*/
+.pincel3 {
+  padding: 2%;
+  background-image: url(Pincel3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: var(--main-radius);
+  margin-top: 5px;
+}
+
+/*Cajita pincel 4*/
+.pincel4 {
+  padding: 2%;
+  background-image: url(Pincel4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: var(--main-radius);
+  margin-top: 5px;
+}
+
+/*Assets*/
+.asset {
+  margin: 5px;
+  background-color: rgba(153, 131, 198, 0.612);
+  border-radius: var(--main-radius);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.assetimg {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-image: url(Asset1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--main-radius);
+  margin: 5px;
+}
+
+.cajitainfo {
+  grid-column-start: span 2;
+}
+
+.assetimg2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-image: url(Asset2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--main-radius);
+  margin: 5px;
+}
+
+.assetimg3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-image: url(Asset3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--main-radius);
+  margin: 5px;
+}
+
+  #content1 {
+    background: #6fffd2;
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #content2 {
+    background: #64ffda;
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #content3 {
+    background: #73ffba;
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  footer {
+    background: #1de9b6;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  a {
+    text-align: center;
+    display: block;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 2px;
+  }
+
+  p {
+    margin-bottom: 2px;
+    margin-top: 4px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .containergrid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+      grid-template-areas:
+        "nav"
+        "sidebar"
+        "portada"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+  }
