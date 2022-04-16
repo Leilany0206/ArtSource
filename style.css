@@ -7,12 +7,13 @@
     font-family: "Inter", sans-serif;
     margin: 0px;
     background-color: rgb(2, 2, 2);
+    height: fit-content;
   }
 
   .containergrid {
+    height: 120vh;
     margin: 5px;
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
     grid-template-areas:
@@ -25,7 +26,6 @@
     text-transform: uppercase;
     font-size: 12px;
     text-align: center;
-    height: fit-content;
   }
 
   h1 {
@@ -38,6 +38,21 @@
     grid-area: nav;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navinfo {
+    color: #8A2BE2;
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  .navinfo2 {
+    color: #8A2BE2;
+    text-align: left;
+    margin-left: 10px;
   }
 
   .logo {
@@ -51,7 +66,6 @@
     background-position-x: center;
     grid-area: portada;
     border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
   }
   /*Sidebar de pinceles y assets*/
 
@@ -60,6 +74,8 @@
     grid-area: sidebar;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    display: block;
+    justify-content: space-between;
   }
 
   #sidebar a {
@@ -95,6 +111,8 @@
   .pincelint {
     background-color: rgba(153, 131, 198, 0.612);
     border-radius: var(--main-radius);
+    display: block;
+    height: fit-content;
   }
 
   .pincelint a:hover {
@@ -184,20 +202,20 @@
     background: #8A2BE2;
     grid-area: content1;
     border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+  }
+
+  #content1 h1 {
+    margin: 10px;
   }
 
   .cajaper {
+    height: 90%;
     margin: 5px;
-    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 24px 24px;
+    gap: 5px;
     grid-auto-flow: row;
-    grid-template-areas:
-      ". ."
-      ". .";
   }
 
   .cajitasper {
@@ -208,12 +226,38 @@
 
   .cajitasper a {
     color:  #99e4ff;
+    padding: 2px;
   }
 
   .perimg {
     background-image: url(Perspectiva.jpg);
     background-repeat: no-repeat;
-  background-size: cover;
+    background-size: cover;
+    border-radius: var(--main-radius);
+  }
+
+  .perimg2 {
+    background-image: url(Perspectiva2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    border-radius: var(--main-radius);
+  }
+
+  .perimg3 {
+    background-image: url(Perspectiva3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    border-radius: var(--main-radius);
+  }
+
+  .perimg4 {
+    background-image: url(Perspectiva4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    border-radius: var(--main-radius);
   }
 
   #content2 {
@@ -222,21 +266,262 @@
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
   }
-  
+
+  #content2 a:hover {
+    color: #ffffff;
+  }
+
+  #content2 a {
+    color:  #48009b;
+  }
+
+  #content2 h1 {
+    margin: 10px;
+  }
+
+  .herramienta {
+    padding: 2%;
+    background-image: url(FondoHerramienta.jpg);
+    margin: 5px;
+    border-radius: var(--main-radius);
+  }
+
+  .herramienta > * {
+    margin: 5px;
+  }
+
+  .website {
+    padding: 2%;
+    background-image: url(FondoWebsite.jpg);
+    margin: 5px;
+    border-radius: var(--main-radius);
+  }
+
+  .website > * {
+    margin: 5px;
+  }
+
+  .moda {
+    padding: 2%;
+    background-image: url(FondoModa.jpg);
+    margin: 5px;
+    border-radius: var(--main-radius);
+  }
+
+  .moda a {
+    color: #ffffff;
+  }
+
+  .moda > * {
+    margin: 5px;
+  }
+
   #content3 {
     background: #9b26d5;
     grid-area: content3;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
   }
+
+  .cajaana {
+    margin: 5px;
+    height: 80%;
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-template-columns: 35% 65%; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 5px 5px; 
+    grid-template-areas: 
+      "cajitasesqueleto cajitasana1"
+      "cajitasesqueleto cajitasana2"
+      "cajitasesqueleto cajitasana3"
+      "cajitasesqueleto cajitasana4"
+      "cajitasesqueleto cajitasana5"; 
+  }
+
+  .cajitasesqueleto {
+    background-image: url(Esqueleto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center; 
+    grid-area: cajitasesqueleto;
+  }
   
+  .anaint {
+    background-color: rgba(153, 131, 198, 0.612);
+    border-radius: var(--main-radius);
+    display: block;
+    height: fit-content;
+  }
+
+  .anaint a:hover {
+    color: #ffffff;
+  }
+
+  .cajitasana1 {
+    display: flex; 
+    align-items: center;
+    padding: 2%;
+    background-image: url(Anatomia1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: var(--main-radius);
+    margin-top: 5px;
+  }
+
+  .cajitasana2 { 
+    display: flex; 
+    align-items: center;
+    padding: 2%;
+    background-image: url(Anatomia2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: var(--main-radius);
+    margin-top: 5px;
+  }
+
+  .cajitasana3 { 
+    display: flex; 
+    align-items: center;
+    padding: 2%;
+    background-image: url(Anatomia3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: var(--main-radius);
+    margin-top: 5px;
+  }
+
+  .cajitasana4 { 
+    display: flex; 
+    align-items: center;
+    padding: 2%;
+    background-image: url(Anatomia4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: var(--main-radius);
+    margin-top: 5px;
+  }
+
+  .cajitasana5 { 
+    display: flex; 
+    align-items: center;
+    padding: 2%;
+    background-image: url(Anatomia5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: var(--main-radius);
+    margin-top: 5px;
+  }
+
   #content4 {
     background: #21adf8;
     grid-area: content4;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
   }
+
+  /*Artistas*/
+  #content4 h1 {
+    margin: 5px;
+  }
+
+  #content4 a {
+    color:  #48009b;
+  }
+
+  #content4 a:hover {
+    color: #ffffff;
+  }
   
+  .cajaart {
+    margin: 5px;
+    height: 70%;
+    display: flex; 
+    align-items: center;
+    display: grid;
+    grid-auto-flow: row dense; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 80px 1fr; 
+    gap: 5px 10px; 
+    grid-template-areas: 
+      "cajitasart1 cajitasart2 cajitasart3 cajitasart4"
+      "cajitasart cajitasart cajitasart cajitasart";
+  }
+
+  .cajitasart1 {
+    display: flex;
+    justify-content: center;
+    grid-area: cajitasart1;
+  }
+
+  .art1circulo {
+    background-image: url(Artista1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;  
+  }
+
+  .cajitasart2 {
+    display: flex;
+    justify-content: center;
+    grid-area: cajitasart2;
+  }
+
+  .art2circulo {
+    background-image: url(Artista2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;  
+  }
+
+  .cajitasart3 {
+    display: flex;
+    justify-content: center;
+    grid-area: cajitasart3;
+  }
+
+  .art3circulo {
+    background-image: url(Artista3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;  
+  }
+
+  .cajitasart4 {
+    display: flex;
+    justify-content: center;
+    grid-area: cajitasart4;
+  }
+
+  .art4circulo {
+    background-image: url(Artista4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;  
+  }
+
   a {
     text-align: center;
     display: block;
@@ -250,11 +535,47 @@
     margin-bottom: 2px;
     margin-top: 4px;
   }
-  
+
+
+  @media only screen and (max-width: 1200px) {
+    * {
+      font-size: x-small;
+    }
+  }
+
   @media only screen and (max-width: 768px) {
+    * {
+      font-size: small;
+    }
+
+    nav *{
+      font-size: x-small;
+    }
+
+    h1 {
+      margin: 20px;
+    }
+
+    #content1 h1 {
+      margin: 20px;
+    }
+
+    .cajaart {
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: 100px 1fr;
+      grid-template-rows: 100px 100px 100px 100px;
+      grid-template-areas:
+        "cajitasart1 cajitasart"
+        "cajitasart2 cajitasart"
+        "cajitasart3 cajitasart"
+        "cajitasart4 cajitasart";
+    }
+
     .containergrid {
+      height: fit-content;
       grid-template-columns: 1fr;
-      grid-template-rows: 0.1fr 0.4fr 0.4fr 1.2fr 1.2fr 1.2fr 1fr;
+      grid-template-rows: 0.08fr 0.4fr 0.5fr .8fr 0.4fr 0.9fr 0.5fr;
       grid-template-areas:
         "nav"
         "portada"
@@ -263,5 +584,14 @@
         "content2"
         "content3"
         "content4";
+    }
+
+    .cajaper {
+      margin: 5px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 5px;
+      grid-auto-flow: row;
     }
   }
