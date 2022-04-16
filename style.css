@@ -358,6 +358,10 @@
     color: #ffffff;
   }
 
+  .anaint a {
+    color:  #48009b;
+  }
+
   .cajitasana1 {
     display: flex; 
     align-items: center;
